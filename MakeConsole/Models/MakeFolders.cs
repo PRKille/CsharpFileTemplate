@@ -8,8 +8,8 @@ namespace File.Models
   {
     public static void Start(string projName, string nameSpace)
     {
-      string dir = GetDirectory();
-      MakeOutput(dir, projName, nameSpace);
+      // string dir = GetDirectory();
+      MakeOutput("../../", projName, nameSpace);
     }
     public static string GetDirectory()
     {
@@ -17,7 +17,7 @@ namespace File.Models
       int homePathIndex = path.IndexOf(".Solutions") + 10;
       string homePath = path.Substring(0, homePathIndex);
 
-      return homePath;
+      return "../../";
     }
 
     public static void MakeOutput(string filePath, string projName, string nameSpace)
