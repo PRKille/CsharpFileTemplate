@@ -14,7 +14,7 @@ namespace File.Models
     public static string GetDirectory()
     {
       string path = Directory.GetCurrentDirectory();
-      int homePathIndex = path.IndexOf(".Solutions") + 10;
+      int homePathIndex = path.IndexOf(".Solution") + 10;
       string homePath = path.Substring(0, homePathIndex);
 
       return "../../";
@@ -22,7 +22,7 @@ namespace File.Models
 
     public static void MakeOutput(string filePath, string projName, string nameSpace)
     {
-      string OutputPath = Path.Combine(filePath, projName + ".Solutions");
+      string OutputPath = Path.Combine(filePath, projName + ".Solution");
       Directory.CreateDirectory(OutputPath);
 
       string gitignore = Path.Combine(OutputPath, ".gitignore");
